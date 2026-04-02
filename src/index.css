@@ -1,0 +1,63 @@
+@import "tailwindcss";
+@import "@xyflow/react/dist/style.css";
+
+* { box-sizing: border-box; }
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+}
+
+/* React Flow customisation */
+.react-flow__handle {
+  width: 10px !important;
+  height: 10px !important;
+  border: 2px solid #E8651A !important;
+  background: white !important;
+  border-radius: 50% !important;
+}
+.react-flow__handle:hover, .react-flow__handle.connecting {
+  background: #E8651A !important;
+}
+.react-flow__edge-path { stroke-width: 2; }
+.react-flow__minimap { border-radius: 8px; overflow: hidden; border: 1px solid rgba(0,0,0,0.15); }
+.react-flow__controls { border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
+.react-flow__controls button { border: none; }
+.react-flow__node { cursor: pointer; }
+.react-flow__node.selected .node-shape { outline: 2px solid #E8651A; outline-offset: 2px; }
+
+/* TipTap editor */
+.tiptap { outline: none; min-height: 150px; }
+.tiptap p { margin: 0 0 0.4rem 0; }
+.tiptap h1 { font-size: 1.4rem; font-weight: 700; margin: 0.5rem 0; }
+.tiptap h2 { font-size: 1.2rem; font-weight: 600; margin: 0.4rem 0; }
+.tiptap h3 { font-size: 1rem; font-weight: 600; margin: 0.3rem 0; }
+.tiptap ul, .tiptap ol { padding-left: 1.5rem; margin: 0.2rem 0; }
+.tiptap blockquote { border-left: 3px solid #E8651A; padding-left: 0.75rem; color: #666; margin: 0.5rem 0; font-style: italic; }
+.tiptap code { background: rgba(0,0,0,0.07); border-radius: 3px; padding: 0.1rem 0.3rem; font-family: monospace; font-size: 0.88em; }
+.tiptap a { color: #1A6B5A; text-decoration: underline; }
+
+/* Dark mode tiptap */
+.dark .tiptap code { background: rgba(255,255,255,0.1); }
+.dark .tiptap blockquote { color: #aaa; }
+.dark .tiptap a { color: #4DB89A; }
+
+/* Context menu animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+.context-menu { animation: fadeIn 0.1s ease; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.2); border-radius: 3px; }
+.dark ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); }

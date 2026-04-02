@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "mano-dev",
+      "runtimeExecutable": "C:\\Windows\\System32\\cmd.exe",
+      "runtimeArgs": ["/c", "C:\\Users\\sapta\\OneDrive\\Portfolio\\Mano\\start-dev.bat"],
+      "port": 5173
+    }
+  ]
+}
